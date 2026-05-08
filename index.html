@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        canvas {
+            border: 3px solid white;
+            background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+            display: block;
+            cursor: crosshair;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        .info {
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .controls {
+            color: #e0e0e0;
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Shooting Game</h1>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="controls">
+                <p>💡 Move mouse to aim</p>
+                <p>🖱️ Click to shoot</p>
+                <p>🎮 Space to restart</p>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
